@@ -9,7 +9,9 @@ module.exports = (webpackConfigEnv, argv) => {
     argv,
   });
 
-  return merge(defaultConfig, {
+  return merge(defaultConfig, { 
+    externals: [ /^@sravan-org\/.+/]
+ 
     // modify the webpack config however you'd like to by adding to this object
   });
 };
